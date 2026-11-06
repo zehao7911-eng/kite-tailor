@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#192e39"><title>Kite Tailor</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><div><small>THE HILLSIDE ATELIER</small><h1>Kite Tailor</h1></div><button id="sound" aria-pressed="true">♪ Sound</button></header>
+<section id="stage" aria-label="Kite worktable">
+<svg id="art" viewBox="0 0 390 430" role="img" aria-label="An illustrated hillside and a hand-stitched kite">
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#75aeb4"/><stop offset="1" stop-color="#f7d8a3"/></linearGradient>
+<linearGradient id="hill" x2="0" y2="1"><stop stop-color="#779f88"/><stop offset="1" stop-color="#365e5c"/></linearGradient>
+<pattern id="weave" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0h4M0 2h4M1 0v4" stroke="#fff8df" stroke-opacity=".18" stroke-width=".55"/></pattern>
+<pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#ffedc6" stroke-opacity=".14"/></pattern>
+<filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#15363e" flood-opacity=".35"/></filter>
+</defs>
+<rect width="390" height="430" fill="url(#sky)"/>
+<circle cx="302" cy="86" r="45" fill="#ffe3a9" opacity=".34"/><circle cx="302" cy="86" r="32" fill="#ffe7b1"/>
+<g fill="#fff2cc" opacity=".72"><path d="M-8 101Q15 82 37 93Q49 69 72 91Q95 86 116 101Z"/><path d="M267 157Q290 136 310 145Q336 124 358 145Q382 140 405 157Z"/><path d="M128 62Q145 46 163 57Q182 41 207 62Z"/></g>
+<path d="M0 312Q58 251 122 294Q179 328 240 267Q301 230 390 285V430H0Z" fill="#9db29a"/>
+<path d="M0 337Q75 281 158 328Q227 363 293 301Q342 273 390 314V430H0Z" fill="#769881"/>
+<path d="M0 389Q82 331 183 379Q261 418 390 346V430H0Z" fill="url(#hill)"/>
+<g id="scenery"></g>
+<g id="board"><rect x="35" y="58" width="320" height="320" rx="24" fill="#264e54" stroke="#d2b682" stroke-width="2" filter="url(#shadow)"/><rect x="45" y="68" width="300" height="300" rx="18" fill="url(#grid)" stroke="#b9ad7f" stroke-dasharray="3 6"/>
+<path d="M58 91h20m-10-10v20m244-10h20m-10-10v20M58 345h20m-10-10v20m244-10h20m-10-10v20" stroke="#d7bc8c" opacity=".6"/>
+<g transform="translate(293 102) rotate(17)"><rect width="33" height="17" rx="3" fill="#c77c58"/><path d="M4 2v13m4-13v13m4-13v13m4-13v13m4-13v13m4-13v13m4-13v13" stroke="#efb887"/><path d="M0 0v17m33-17v17" stroke="#ead0a0" stroke-width="4"/><path d="M32 11q20 2 11 20t10 13" fill="none" stroke="#edaf81"/></g>
+<g transform="translate(74 294) rotate(-26)" fill="none" stroke="#deb183" stroke-width="3"><ellipse cx="0" cy="0" rx="6" ry="8"/><ellipse cx="13" cy="0" rx="6" ry="8"/><path d="M1 7L16 34M12 7L-3 34" stroke="#a8bdad"/></g>
+<g fill="#d9bd85" font-size="8" font-family="Georgia" letter-spacing="3"><text x="57" y="119">CUT</text><text x="284" y="328">STITCH</text></g>
+</g>
+<g id="kite"></g>
+</svg>
+<div class="stamp"><small id="chapter"></small><strong id="name"></strong></div>
+<div id="status" role="status"></div>
+<div id="result" hidden><strong id="stars"></strong><h2>Kite complete</h2><p id="rating"></p><button id="next">Next pattern →</button><button id="replay">Replay</button></div>
+</section>
+<section class="controls">
+<div id="tray" aria-label="Fabric pieces"></div>
+<div id="flight" hidden><div id="meter"><i></i><b></b></div><button id="tug">Catch the gust</button></div>
+<button id="launch" hidden>Release the kite ↑</button>
+</section>
+<nav id="patterns" aria-label="Patterns"></nav>
+<p class="note">Match four fabric panels. Catch three gusts to finish.</p>
+<p id="rewards" class="note" hidden></p>
+</main><script type="module" src="app.mjs"></script></body></html>
